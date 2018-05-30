@@ -88,9 +88,9 @@ d3.csv("../../data/hairData.csv", function(error,dumbData){
         tooltip.show(data)
 
     })
-    .on("mouseout", function(data, index){
-        tooltip.hide(data);
-    });
+    // .on("mouseout", function(data, index){
+    //     tooltip.hide(data);
+    // });
 
     chart.append("g")
         .attr("transform", `translate(0,${chartHeight})`)
@@ -100,7 +100,7 @@ d3.csv("../../data/hairData.csv", function(error,dumbData){
     .call(leftAxis);
 
     chart.append("text")
-    .attr("transform", "rotate(-90")
+    .attr("transform", "rotate(-90)")
     .attr("y", 0 - margin.left + 50)
     .attr("x", 0 - chartHeight)
     .attr("dy", "1em")
